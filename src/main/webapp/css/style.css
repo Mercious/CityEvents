@@ -1,0 +1,346 @@
+/* Stylesheet für Selfhtml Design 04 
+  responsives Layout mit Flexbox ab Z. 262   */
+
+/* ====================================================   GLOBAL DEFINITION   ==================================================== */
+
+/* alternatives Boxmodell */
+html { 
+  box-sizing: border-box; 
+} 
+
+*, ::before, ::after { 
+  box-sizing: inherit; 
+}
+
+body {
+    max-width: 75em;
+    margin: 0 auto; 
+	padding: 0 1em;
+    font: normal 1em Arial, sans-serif;  /* Mindestschriftgröße wird dem Browser, bzw. dem Nutzer überlassen! */
+	color: #555;
+    background: #ddd;
+	position:relative;
+}
+
+/* ===== header ===== */
+
+header.banner {
+	background: #fff;
+	padding: .5em 1em;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	border-radius: 0 0 1em 1em;
+}
+
+#logo {
+	margin: 22px 0 0 3%;
+	color: #58585a;
+	font-size:1.7em;
+	font-style:italic;
+	font-weight:normal;
+	text-decoration: none;
+}
+
+header a#navlink {
+	display: block;
+	float: right;
+	color: #88a600;
+	text-decoration: none;
+	font-size: 2em;
+	font-weight: bold;
+}
+		
+/* ===== content / Inhalt ===== */
+	
+main {
+	padding: 1em;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	border-radius: 1em;  
+}
+
+a {
+	color: #97b314; 
+}
+
+a:hover,
+a:focus {
+	background: rgba(195,214,106,0.95);
+	color: #708900;
+}
+
+a.button{
+	background: #97b314;
+	font-weight: bold;
+	box-shadow: 0 0 20px #c3d34e inset, 0 2px 1px rgba(0,0,0,0.2);
+	color: #fff;
+	padding: 0.5em;
+	border-radius: .5em;
+	text-decoration: none;	
+}
+a.button:hover,
+a.button:focus {
+	background: #708900;
+}
+
+h1 {
+}
+
+h1 span,
+.akzentfarbe1 {
+	color: #c3d66a;
+}
+
+h1 a:hover span {
+    color: #fff;
+}
+
+.akzentfarbe2 {
+	color: orange;
+}
+
+aside,
+section {
+	box-shadow: 0 0 80px rgba(0,0,0,0.1) inset, 0 3px 1px rgba(0,0,0,0.15);
+	border-radius: 1em;
+	position: relative;
+	padding: 0 0 4em;     /* Platz für abslout positionierte Buttons */
+}
+
+aside h2,
+section h2 {
+	color: #fff;
+	padding: .5em;
+	margin: 0;
+	background: rgba(195,214,106,0.95);
+	border-radius: .5em;
+	box-shadow: 0 3px 0 #708900;
+}
+
+section p {
+	padding: 0.5em 1em;
+}
+
+section p:first-of-type {
+	font-weight: bold;
+	color: #708900;
+}
+
+section img {
+  width: calc(100% - 1em);
+  margin: 0.5em 0.5em 1.5em;
+}
+
+aside {
+}
+
+section a.button {			
+	position: absolute;	/* So werden Buttons immer an der gleichen Stelle, unabhängig vom vorhandenen Inhalt, positioniert */
+	right: 1em;
+	bottom: 1em;
+}
+
+form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap:.5em; 
+	padding: 1em; 
+}
+
+form input {
+	background: #555;
+	border-radius: 4px;
+	border: none;
+	color: #fff;
+	padding: 0.75em 0.75em 0.75em 2.5em;
+	font-weight: bold;
+}
+
+form#search{ 
+	position:relative;
+}	
+
+form#search input {
+	width: 15em;
+	margin: 0 1em;
+}		
+
+#search i {
+	position: absolute;
+	top: 1.2em;
+	left: 1.75em;
+	color: #bebebe;
+}
+
+section ul {
+	margin: 1em 0 0 3em;
+}
+		
+section li {
+	font-weight: bold;
+	margin: 0.5em 0 1em 2em;
+}
+section li i {
+	color: #97b314; 
+}
+
+dl.grid { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0.5em;
+}
+dd { 
+  margin: 0; 
+  padding-left: 1em; 
+}
+dl.grid dd {
+  margin-bottom: 1em;
+}
+
+a[href^="tel"] { white-space: nowrap; }
+
+/* ===== Navigation ===== */
+
+#navigation li {
+	display: block;
+	list-style: none;
+	margin-right: .5em; 
+	width: 90%;
+}
+
+#navigation a {
+	display: block; 
+	text-decoration: none;
+	padding: 0.5em 1em;
+	background-color: #fff;
+	border-radius: .5em .5em 0 0;	
+}
+
+#navigation a[aria-current=page] {
+	font-weight:bold;
+    background: linear-gradient(rgba(195,214,106,0.95), #fff);
+}
+
+#navigation a:hover,
+#navigation a:focus, 
+#navigation a:active  {
+	color: white;
+    background: linear-gradient(#97b314, #fff);	   
+}		
+
+/* ===== Footer ===== */
+	
+#social {
+	float: left;
+}
+
+#social li {
+	margin: 0 20px 0 0;
+	display:inline-block;;
+}
+	
+#fb {
+	background: url("../img/fb.png") no-repeat;
+	float: left;
+	width: 16px;
+	height: 16px;
+}
+	
+#twitter {
+	background: url("../img/twitter.png") no-repeat;
+	float: left;
+	width: 16px;
+	height: 16px;
+}
+	
+#yt {
+	background: url("../img/yt.png") no-repeat;
+	float: left;
+	width: 16px;
+	height: 16px;
+}
+	
+footer #copyright {
+	float: right;
+}
+
+/* ===== responsives Layout ===== */
+
+/* Mobile first! 1-Spaltenlayout  */
+
+
+/* 2-Spaltenlayout, sobald der Platz es erlaubt  */
+
+@media only screen and (min-width: 40em) {
+  main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap:1em;
+	position: relative;
+	margin: 3em auto 1em;
+  }
+  
+  article {
+	grid-column: span 2;
+  }
+  
+  header a#navlink {
+	display: none;
+  }
+
+  #navigation  {
+    position: absolute;
+    top: -3em;
+  }
+  
+  #navigation li {
+	display: inline-block;
+	width: auto;
+}
+
+#navigation a {
+	display: inline-block; 
+}
+
+/* 3-Spaltenlayout, sobald der Platz es erlaubt  */
+@media only screen and (min-width: 60em) {
+  main {
+	grid-template-columns: repeat(3, 1fr);
+  }
+
+	main header,
+	main footer {
+	  grid-column: span 3;
+	}
+
+	article{
+	  grid-column: span 2;		
+	}
+}
+
+/* Flexbox Fallback wenn der  Browser kein display:grid unterstützt. */
+@supports not (display: grid) {
+  main {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+main > * {
+  flex: 1 100%;      /* Alle Elemente werden über die volle Breite dargestellt */
+} 
+
+article {
+  flex: 1 64%;      
+  margin: 1%;
+}
+section,
+aside {
+  flex: 1 31%;      /* Diese Elemente erhalten eine Breite von 1/3.  */
+  margin: 1%;
+}
+}
+}
+
+.big {
+	font-size: 20px;
+	font-weight:bold;
+}
