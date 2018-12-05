@@ -40,6 +40,38 @@ header.banner {
 	text-decoration: none;
 }
 
+.search-container {
+	position: absolute;
+	top: 3em;
+	right: 20px;
+}
+
+.search-container button {
+	float: right;
+	padding: 6px 10px;
+	font-size: 17px;
+	border-radius: 1em;
+	border: none;
+	cursor: pointer;
+	background: #88a600;
+}
+
+.searchBar {
+	width: 400px;
+	height: 30px;
+	border-radius: 1em;
+	border: 2px solid #88a600;
+	padding: 5px;
+	outline-width: 0;
+}
+.searchRadiusSelect {
+	border: 2px solid #88a600;
+	height: 30px;
+	border-radius: 1em;
+	outline-width: 0;
+	padding: 5px;
+}
+
 header a#navlink {
 	display: block;
 	float: right;
@@ -109,11 +141,12 @@ section {
 aside h2,
 section h2 {
 	color: #fff;
-	padding: .5em;
+	padding: 5px 5px 5px 5px;
 	margin: 0;
 	background: rgba(195,214,106,0.95);
 	border-radius: .5em;
 	box-shadow: 0 3px 0 #708900;
+	font-size: 20px;
 }
 
 section p {
@@ -127,6 +160,7 @@ section p:first-of-type {
 
 section img {
   width: calc(100% - 1em);
+	/*height: 200px;*/
   margin: 0.5em 0.5em 1.5em;
 }
 
@@ -136,6 +170,12 @@ aside {
 section a.button {			
 	position: absolute;	/* So werden Buttons immer an der gleichen Stelle, unabhängig vom vorhandenen Inhalt, positioniert */
 	right: 1em;
+	bottom: 1em;
+}
+
+.fixed {
+	position: absolute;
+	left: 0;
 	bottom: 1em;
 }
 
@@ -316,6 +356,7 @@ footer #copyright {
 	  grid-column: span 2;		
 	}
 }
+
 
 /* Flexbox Fallback wenn der  Browser kein display:grid unterstützt. */
 @supports not (display: grid) {
