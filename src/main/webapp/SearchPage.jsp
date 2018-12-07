@@ -15,7 +15,6 @@
 <header class="banner">
     <h1><a id="logo" title="zurück zur Startseite!" href="index.html"><img src="img/logo.png"  alt="Webseiten Name">CityEvents</a></h1>
     <a id="navlink" title="zum Navigationsmenü" href="#navigation">☰</a>
-
     <div class="search-container">
         <form action="/searchPostalCode" method="get">
             <select id="searchRadiusSelect" class="searchRadiusSelect" name="areaSetting">
@@ -30,20 +29,21 @@
         </form>
     </div>
 
+
     <div class="search-container-text">
         <form action="/searchTerm">
             <input id="searchBarText" class="searchBar" placeholder="Nach einem bestimmten Event suchen ..." name="searchTerm"/>
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
+
 </header>
 
 <main id="main">
     <header>
-        <h1>Willkommen <span class="akzentfarbe1">Name, Vorname</span></h1>
-        <p>Hier siehst du eine Ausblick auf trendige Events in deiner Nähe! </p>
+        <h1>Du hast nach <span class="akzentfarbe1"><c:out value="${searchRequest}"/></span> gesucht!</h1>
+        <p>Das hier haben wir für Dich gefunden: </p>
     </header>
-
     <c:forEach items="${events}" var="event">
         <section class="spalte testen">
             <h2><i class="fa fa-user fa-lg"></i>${event.eventName}</h2>

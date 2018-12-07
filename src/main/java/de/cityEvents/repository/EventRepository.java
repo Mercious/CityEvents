@@ -8,4 +8,5 @@ import java.util.List;
 public interface EventRepository extends CrudRepository<Event, Long> {
 
   List<Event> findByEventName(String eventName);
+  List<Event> findByEventNameContaining(final String eventName);
 }

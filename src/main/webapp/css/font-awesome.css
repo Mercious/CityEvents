@@ -209,6 +209,8 @@
 }
 .fa-user:before {
   content: "\f007";
+  margin-right: 5px;
+  margin-left: 5px;
 }
 .fa-film:before {
   content: "\f008";
